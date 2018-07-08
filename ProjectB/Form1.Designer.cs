@@ -33,12 +33,12 @@
             this.Add_image = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Xbox = new System.Windows.Forms.TextBox();
+            this.Ybox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Textcontent = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,21 +76,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // textBox1
+            // Xbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(557, 204);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "0";
+            this.Xbox.Location = new System.Drawing.Point(557, 204);
+            this.Xbox.Name = "Xbox";
+            this.Xbox.Size = new System.Drawing.Size(69, 20);
+            this.Xbox.TabIndex = 3;
+            this.Xbox.Text = "0";
             // 
-            // textBox2
+            // Ybox
             // 
-            this.textBox2.Location = new System.Drawing.Point(557, 230);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(69, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "0";
+            this.Ybox.Location = new System.Drawing.Point(557, 230);
+            this.Ybox.Name = "Ybox";
+            this.Ybox.Size = new System.Drawing.Size(69, 20);
+            this.Ybox.TabIndex = 4;
+            this.Ybox.Text = "0";
             // 
             // label1
             // 
@@ -119,13 +119,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "y";
             // 
-            // textBox3
+            // Textcontent
             // 
-            this.textBox3.Location = new System.Drawing.Point(480, 131);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 54);
-            this.textBox3.TabIndex = 8;
+            this.Textcontent.Location = new System.Drawing.Point(480, 131);
+            this.Textcontent.Multiline = true;
+            this.Textcontent.Name = "Textcontent";
+            this.Textcontent.Size = new System.Drawing.Size(146, 54);
+            this.Textcontent.TabIndex = 8;
             // 
             // label4
             // 
@@ -142,12 +142,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 393);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Textcontent);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Ybox);
+            this.Controls.Add(this.Xbox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Add_image);
@@ -166,12 +166,12 @@
         private System.Windows.Forms.Button Add_image;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Xbox;
+        private System.Windows.Forms.TextBox Ybox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Textcontent;
         private System.Windows.Forms.Label label4;
     }
 }

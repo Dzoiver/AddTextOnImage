@@ -22,16 +22,18 @@ namespace ProjectB
         {
             get
             {
-                return Convert.ToInt32(textBox1.Text);
+                return Convert.ToInt32(Xbox.Text);
             }
         }
         int Coory
         {
             get
             {
-                return Convert.ToInt32(textBox2.Text);
+                return Convert.ToInt32(Ybox.Text);
             }
         }
+
+
 
         Graphics g;
         Image image;
