@@ -46,6 +46,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.Saveimage = new System.Windows.Forms.Button();
+            this.Saveall = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +77,7 @@
             // 
             // Add_text
             // 
+            this.Add_text.Enabled = false;
             this.Add_text.Location = new System.Drawing.Point(480, 357);
             this.Add_text.Name = "Add_text";
             this.Add_text.Size = new System.Drawing.Size(146, 23);
@@ -132,6 +136,7 @@
             this.Textcontent.Name = "Textcontent";
             this.Textcontent.Size = new System.Drawing.Size(146, 54);
             this.Textcontent.TabIndex = 8;
+            this.Textcontent.Text = "Безруков Кирилл";
             // 
             // label4
             // 
@@ -158,7 +163,7 @@
             this.Fontname.FormattingEnabled = true;
             this.Fontname.Items.AddRange(new object[] {
             "TimesNewRoman"});
-            this.Fontname.Location = new System.Drawing.Point(505, 102);
+            this.Fontname.Location = new System.Drawing.Point(505, 112);
             this.Fontname.Name = "Fontname";
             this.Fontname.Size = new System.Drawing.Size(121, 21);
             this.Fontname.TabIndex = 11;
@@ -176,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(588, 86);
+            this.label6.Location = new System.Drawing.Point(588, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 13;
@@ -189,6 +194,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 14;
+            this.comboBox1.Text = "18";
             // 
             // label7
             // 
@@ -199,11 +205,46 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Размер";
             // 
+            // Saveimage
+            // 
+            this.Saveimage.Enabled = false;
+            this.Saveimage.Location = new System.Drawing.Point(483, 42);
+            this.Saveimage.Name = "Saveimage";
+            this.Saveimage.Size = new System.Drawing.Size(140, 23);
+            this.Saveimage.TabIndex = 16;
+            this.Saveimage.Text = "Сохранить изображение";
+            this.Saveimage.UseVisualStyleBackColor = true;
+            this.Saveimage.Click += new System.EventHandler(this.Saveimage_Click);
+            // 
+            // Saveall
+            // 
+            this.Saveall.Enabled = false;
+            this.Saveall.Location = new System.Drawing.Point(483, 72);
+            this.Saveall.Name = "Saveall";
+            this.Saveall.Size = new System.Drawing.Size(140, 23);
+            this.Saveall.TabIndex = 17;
+            this.Saveall.Text = "Применить ко всем в";
+            this.Saveall.UseVisualStyleBackColor = true;
+            this.Saveall.Click += new System.EventHandler(this.Saveall_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(485, 324);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "debug";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 393);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Saveall);
+            this.Controls.Add(this.Saveimage);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
@@ -220,6 +261,10 @@
             this.Controls.Add(this.Add_text);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Add_image);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(666, 432);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(666, 432);
             this.Name = "Form1";
             this.Text = "Редактор изображений";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -248,6 +293,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Saveimage;
+        private System.Windows.Forms.Button Saveall;
+        private System.Windows.Forms.Button button1;
     }
 }
 
