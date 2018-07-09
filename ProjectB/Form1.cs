@@ -18,43 +18,30 @@ namespace ProjectB
             InitializeComponent();
         }
 
-        int Coorx
+        int Coorx            { get  {return Convert.ToInt32(Xbox.Text);} } // Получение значения из текстбокса х координат
+        int Coory            { get  {return Convert.ToInt32(Ybox.Text);} } // Получение значения из текстбокса y координат
+        string Print_text    { get  {return Textcontent.Text;} } // Получение значения из текстбокса содержимого надписи
+        string Fonttype          { get  {return "Brushes." + Fontname.Text;} } // Получение значения из комбобокса Шрифт
+        string FontColor     { get  {return Fontcolor.Text;} } // Получение значения из комбобокса 
+
+        Graphics g; // Создание элемента графики
+        Image image; // Создание изображения
+        private void AddImage_Click(object sender, EventArgs e) // Событие при нажатии кнопки Добавить изображение
         {
-            get
+            OpenFileDialog dlg = new OpenFileDialog(); // Открытие диаологового окна
+            dlg.Filter = ("png files (*.png)|*.png"); // Фильтр для выбора файлов
+            if (dlg.ShowDialog() == DialogResult.OK) // Проверка на успешное открытие диалога
             {
-                return Convert.ToInt32(Xbox.Text);
+                image = Image.FromFile(dlg.FileName); // Выбранный файл помещается в image
+                pictureBox1.Image = image; // Отрисовка image на picturebox1 
             }
         }
-        int Coory
+
+        private void Add_text_Click(object sender, EventArgs e) // Событие при нажатии кнопки Добавить надпись
         {
-            get
-            {
-                return Convert.ToInt32(Ybox.Text);
-            }
-        }
-
-
-
-        Graphics g;
-        Image image;
-        string filename;
-        private void AddImage_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = ("png files (*.png)|*.png");
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                image = Image.FromFile(dlg.FileName);
-                pictureBox1.Image = image;
-            }
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            g = Graphics.FromImage(image);
-            var font = new Font("TimesNewRoman", 25, FontStyle.Regular, GraphicsUnit.Pixel);
-            g.DrawString("Hello world", font, Brushes.Black, new Point(Coorx, Coory));
+            g = Graphics.FromImage(image); // Присваиваем экземпляру графики изображение
+            var font = new Font(Fonttype, 25, FontStyle.Regular, GraphicsUnit.Pixel); // Создаем шрифт
+            g.DrawString(Print_text, font, Brushes.Black, new Point(Coorx, Coory)); // 
             pictureBox1.Image = image;
         }
     }
